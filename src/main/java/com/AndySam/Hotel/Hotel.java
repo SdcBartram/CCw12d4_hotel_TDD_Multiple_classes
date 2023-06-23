@@ -12,8 +12,8 @@ public class Hotel {
     private ArrayList<ConferenceRoom> hotelConferenceRooms;
 
     public Hotel(ArrayList<Bedroom> hotelBedrooms, ArrayList<ConferenceRoom> hotelConferenceRooms){
-        this.hotelBedrooms = new ArrayList<>();
-        this.hotelConferenceRooms = new ArrayList<>();
+        this.hotelBedrooms = hotelBedrooms;
+        this.hotelConferenceRooms = hotelConferenceRooms;
     };
 
     public ArrayList<Bedroom> getHotelBedrooms(){
@@ -34,6 +34,8 @@ public class Hotel {
 
     public void checkInGuest(Room room, Guest guest){
         room.addGuestToRoom(guest);
+
+
     }
 
     public void checkOutGuest(Room room, Guest guest){
